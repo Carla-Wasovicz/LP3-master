@@ -57,7 +57,6 @@ async function buscar(query){
          
     })  
 }
-
 async function ListarNiveis(){
     const url =`http://localhost:3000/niveis`
     const response = await axios.get(url)
@@ -65,7 +64,6 @@ async function ListarNiveis(){
     ListarNiveis.forEach(function(niveis){
         filtrarNivel.innerHTML+=`<option value="${niveis.nivel}">${niveis.nivel}</option>`
     })
-
 }
 
 const btnBuscar = document.querySelector('.btn-buscar')

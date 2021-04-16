@@ -1,0 +1,77 @@
+{
+
+    "cursos":[
+        {
+            "id":1,
+            "nomeCurso":"Técnico Integrado em Agricultura",
+            "nivel":"Técnico Integrado",
+            "duracao":"3 Anos",
+            "municipio":"Naviraí"
+        },
+
+        {
+            "id":2,
+            "nomeCurso":"Tecnologia em Alimentos",
+            "nivel":"Graduação",
+            "duracao":"3 Anos",
+            "municipio":"Coxim"
+        },
+        {
+            "id":3,
+            "nomeCurso":"Tecnologia em Gestão do Agronegócio",
+            "nivel":"Graduação",
+            "duracao":"3 Anos e meio",
+            "municipio":"Ponta Porã"
+        },
+        {
+            "id":4,
+            "nomeCurso":"Tecnologia em Produção de Grãos",
+            "nivel":"Graduação",
+            "duracao":"3 Anos",
+            "municipio":"Nova Andradina"
+        },
+        {
+            "id":5,
+            "nomeCurso":"Tecnologia em Automação Industrial",
+            "nivel":"Graduação",
+            "duracao":"3 Anos",
+            "municipio":"Três Lagoas"
+        },
+        {
+            "id":6,
+            "nomeCurso":"Tecnologia em jogos Digitais",
+            "nivel":"Graduação",
+            "duracao":"3 Anos",
+            "municipio":"Dourados"
+        },
+        {
+            "id":7,
+            "nomeCurso":"Tecnologia em Redes de Computadores",
+            "nivel":"Graduação",
+            "duracao":"3 Anos",
+            "municipio":"Aquidauana"
+        },
+        {
+            "id":8,
+            "nomeCurso":"Inglês Básico",
+            "nivel":"Qualificação",
+            "duracao":"18 meses",
+            "municipio":"Aquidauana"
+        },
+        {
+            "id":9,
+            "nomeCurso":"Técnico Subsequente em Agricultura",
+            "nivel":"Técnico Subsequente",
+            "duracao":"1,5 Anos",
+            "municipio":"Navirai"
+        },
+        {
+            "id":10,
+            "nomeCurso":"Técnico Subsequente em Marketing",
+            "nivel":"Técnico Subsequente",
+            "duracao":"1,5 Anos",
+            "municipio":"Dourados"
+        }
+
+    ]
+}

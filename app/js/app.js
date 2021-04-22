@@ -76,9 +76,6 @@ filtrarNivel.addEventListener('change',function(){
 })
 
 
-    
-
-
 
 listarCursos()
 ListarNiveis()

@@ -1,6 +1,25 @@
 {
+    "niveis":[
+        {
+            "id":1,
+            "nivel":"Graduação"
+        },
+        {
+            "id":2,
+            "nivel":"Qualificação"
+        },
+        {
+            "id":3,
+            "nivel":"Técnico Integrado"
+        },
+        {
+            "id":4,
+            "nivel":"Técnico Subsequente"
+        }
 
-    "cursos":[
+    ],
+
+    "curso":[
         {
             "id":1,
             "nomeCurso":"Técnico Integrado em Agricultura",

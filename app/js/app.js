@@ -1,12 +1,10 @@
+import getData from "./api.js";
+
 const apiData = document.querySelector('.api-data')
 const filtrarNivel = document.querySelector('.filtrar-nivel')
 
-async function listarCursos(){
-    const url = 'http://localhost:3000/cursos'
-    const response = await axios.get(url)
-    const ListaDeCursos = Array.from(response.data)
-
-    ListaDeCursos.forEach(async function(curso)  {
+function rendCursos(listaDeCursos){
+    listaDeCursos.forEach(async function(curso)  {
         apiData.innerHTML+=`
         <div class="card m-2">
             <section class="card-body">
@@ -28,40 +26,26 @@ async function listarCursos(){
     `
          
     })  
+}
+async function listarCursos(){
+    const response= await getData('cursos')
+    const listaDeCursos = Array.from(response.data)
+    rendCursos (listaDeCursos)
+
+   
 }
 async function buscar(query){
-    const url =  `http://localhost:3000/cursos?q=${query}`
-    const response = await axios.get(url)
+    const response = await getData(` cursos?q=${query}`)
     const ListaDeCursos = Array.from(response.data)
-   
-    ListaDeCursos.forEach(function(curso)  {
-        apiData.innerHTML+=`
-        <div class="card m-2">
-            <section class="card-body">
-                <h6 class="card-title">${curso.id}</h6>
-                <p>
-                    Nome do Curso: ${curso.nomeCurso}
-                </p>
-                <p>
-                    Nível: ${curso.nivel}
-                </p>
-                <p>
-                    Duração: ${curso.duracao}
-                </p>
-                <p>
-                Municipio: ${curso.municipio}
-            </p>
-            </section>
-        </div>
-    `
-         
-    })  
+    apiData.innerHTML+=""
+    rendCursos(listaDeCursos)
+       
 }
-async function ListarNiveis(){
-    const url =`http://localhost:3000/niveis`
-    const response = await axios.get(url)
-    const ListarNiveis = Array.from(response.data)
-    ListarNiveis.forEach(function(niveis){
+async function listarNiveis(){
+   
+    const response = await getData(`niveis`)
+    const filtrarNiveis = Array.from(response.data)
+    filtrarNiveis.forEach(function(niveis){
         filtrarNivel.innerHTML+=`<option value="${niveis.nivel}">${niveis.nivel}</option>`
     })
 }
@@ -69,15 +53,16 @@ async function ListarNiveis(){
 const btnBuscar = document.querySelector('.btn-buscar')
 const inputSearch = document.querySelector('input[type=search]')
 btnBuscar.addEventListener('click',function(){
-    search(inputSearch.value)
+    buscar(inputSearch.value)
 })
 filtrarNivel.addEventListener('change',function(){
-    search(filtrarNivel.value)
+    buscar(filtrarNivel.value)
 })
+
 
 
 listarCursos()
-ListarNiveis()
+listarNiveis()
 
   
 
